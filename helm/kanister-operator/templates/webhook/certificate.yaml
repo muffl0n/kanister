@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "kanister-operator.fullname" . }}-admission
+spec:
+  commonName: {{ include "kanister-operator.fullname" . }}.{{ .Release.Namespace }}.svc
+  dnsNames:
+    - {{ include "kanister-operator.fullname" . }}
+    - {{ include "kanister-operator.fullname" . }}.{{ .Release.Namespace }}.svc
+  issuerRef:
+    kind: Issuer
+    name: selfsigned-issuer
+  secretName: {{ include "kanister-operator.fullname" . }}-admission

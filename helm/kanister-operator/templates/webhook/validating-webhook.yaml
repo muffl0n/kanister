@@ -3,6 +3,8 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   name: "blueprints.cr.kanister.io"
+  annotations:
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace }}/{{ include "kanister-operator.fullname" . }}-admission
 webhooks:
 - name: "blueprints.cr.kanister.io"
   rules:
