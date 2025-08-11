@@ -1,5 +1,5 @@
 # Build Kopia binary
-FROM golang:1.24.2-bullseye@sha256:f0fe88a509ede4f792cbd42056e939c210a1b2be282cfe89c57a654ef8707cd2 AS builder
+FROM golang:1.24.6-bullseye@sha256:637f45ef9f8fb4228406268d544df3f1251703cda025f706902c3627fa621c54 AS builder
 
 ARG kopia_build_commit=master
 ARG kopia_repo_org=kopia
