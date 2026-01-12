@@ -1,6 +1,6 @@
 module github.com/kanisterio/kanister
 
-go 1.24
+go 1.24.0
 
 toolchain go1.24.2
 
@@ -49,7 +49,7 @@ require (
 	github.com/spf13/cobra v1.9.1
 	go.uber.org/zap v1.27.0
 	golang.org/x/oauth2 v0.30.0
-	gonum.org/v1/gonum v0.16.0
+	gonum.org/v1/gonum v0.17.0
 	google.golang.org/api v0.246.0
 	google.golang.org/grpc v1.74.2
 	google.golang.org/protobuf v1.36.7
